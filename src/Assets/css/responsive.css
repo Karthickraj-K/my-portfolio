@@ -1,0 +1,27 @@
+@media (max-width: 320px) {
+    .main-menus{display: none;}
+}
+@media (min-width: 320px) and (max-width : 576px) {
+    .logo{font-size: 25px;}
+    .tech-logos img{width: 80px; height: 80px;}
+    .tech-logos .css {  margin-left: -25px}
+    .tech-logos .bootstrap { margin-left: -25px }
+    .tech-logos .js {  margin-left: -25px }
+    .tech-logos .react {margin-left: -25px}
+    .tech-logos .redux {  margin-left: -25px}
+    .tech-logos .gatsby { margin-left: -25px}
+    .banner-text h1{font-size: 35px; margin-bottom: 30px;}
+    .banner-text h2{font-size: 30px;}
+    .banner-text{margin-bottom: 35px;}
+    footer .copyrights{justify-content: center !important;}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-menus{display: none;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-menus{display: none;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) and (max-width: 1277px) {
+}
