@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout";
 import Home from '../Components/Home'
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router";
 import About from "../Components/About";
 import Project from "../Components/Projects";
 import Experience from "../Components/Experience";
@@ -14,12 +14,12 @@ const Index = () => {
             <Router>
                 <Routes>
                     <Route element={<MainRouters />} >
-                        <Route path="/" element={<Home />} />
+                        <Route path="/my-portfolio" element={<Home />} />
                         <Route path="/about-me" element={<About />} />
                         <Route path="/projects" element={<Project />} />
                         <Route path="/experience" element={<Experience />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path='/*' element={<Navigate to="/" />} />
+                        <Route path='/*' element={<Navigate to="/my-portfolio" />} />
                     </Route>
                 </Routes>
             </Router>
