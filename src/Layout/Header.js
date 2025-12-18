@@ -19,12 +19,27 @@ const Header = () => {
               <li> <Link className={`${location.pathname === '/contact' ? 'active' : ""}`} to={'/contact'}> <i className='bx bx-phone'></i>  Contact Me</Link> </li>
             </ul>
             <a href='tel:+918428471708' className='hire-me-btn animate__bounceInDown animate__animated'>Hire Me</a>
-            <button type="button" className="btn btn-primary d-lg-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" className="btn btn-primary d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark">
               <i className='bx  bx-menu'></i>
             </button>
           </div>
         </div>
       </header>
+      <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="offcanvasDarkLabel">Menus</h5>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div className="offcanvas-body">
+           <ul className='offcanvas-menus ps-0'>
+              <li> <Link className={`${location.pathname === '/' ? 'active' : ""}`} to={'/'}> <i className='bx bx-home'></i> Home</Link> </li>
+              <li> <Link className={`${location.pathname === '/about-me' ? 'active' : ""}`} to={'/about-me'}> <i className='bx bx-info-circle'></i> About Me</Link> </li>
+              <li> <Link className={`${location.pathname === '/projects' ? 'active' : ""}`} to={'/projects'}> <i className='bx bx-task'></i> My Projects</Link> </li>
+              <li> <Link className={`${location.pathname === '/experience' ? 'active' : ""}`} to={'/experience'}> <i className='bx bx-detail'></i> Experience</Link> </li>
+              <li> <Link className={`${location.pathname === '/contact' ? 'active' : ""}`} to={'/contact'}> <i className='bx bx-phone'></i>  Contact Me</Link> </li>
+            </ul>
+        </div>
+      </div>
     </React.Fragment>
   )
 }

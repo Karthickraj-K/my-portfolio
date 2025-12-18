@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Qads Digital Marketing Pvt. Ltd",
       role: "Software Developer",
       period: "2025 - Currently Working Here",
-      icon: "<i class='bx  bx-caret-right'></i> ",
+      icon: "<i className='bx  bx-caret-right'></i> ",
       desc: [
         "Worked with backend teams for smooth integration.",
         "Improved UI performance and loading speed.",
@@ -22,7 +22,7 @@ const Experience = () => {
       company: "Monter Smart Drive Pvt. Ltd",
       role: "Software Developer",
       period: "2024 - 2025",
-      icon: "<i class='bx  bx-caret-right'></i> ",
+      icon: "<i className='bx  bx-caret-right'></i> ",
       desc: [
         "Developed scalable applications using React & Gatsby JS.",
         "Built responsive UI for mobile & desktop.",
@@ -35,7 +35,7 @@ const Experience = () => {
       company: "Monter Smart Drive Pvt. Ltd",
       role: "Junior Developer",
       period: "2022 - 2024",
-      icon: "<i class='bx  bx-caret-right'></i>",
+      icon: "<i className='bx  bx-caret-right'></i>",
       desc: [
         "Created core UI modules using React & Bootstrap.",
         "Improved website performance & SEO.",

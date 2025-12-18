@@ -10,7 +10,7 @@ import About from '../Assets/images/about-1.png'
 import Msdcars from '../Assets/images/msdcars.png'
 import LittleRoses from '../Assets/images/littleroses.png'
 import QadsFranchise from '../Assets/images/qadsfranchise.png'
-import { useNavigate } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import Aos from 'aos'
 import FloatingBackground from './Animation/FloatingBackground'
 
@@ -35,7 +35,7 @@ const Home = () => {
       company: "Qads Digital Marketing Pvt. Ltd",
       role: "Software Developer",
       period: "2025 - Currently Working Here",
-      icon: "<i class='bx  bx-caret-right'></i> ",
+      icon: "<i className='bx  bx-caret-right'></i> ",
       desc: [
         "Worked with backend teams for smooth integration.",
         "Improved UI performance and loading speed.",
@@ -48,7 +48,7 @@ const Home = () => {
       company: "Monter Smart Drive Pvt. Ltd",
       role: "Software Developer",
       period: "2024 - 2025",
-      icon: "<i class='bx  bx-caret-right'></i> ",
+      icon: "<i className='bx  bx-caret-right'></i> ",
       desc: [
         "Developed scalable applications using React & Gatsby JS.",
         "Built responsive UI for mobile & desktop.",
@@ -61,7 +61,7 @@ const Home = () => {
       company: "Monter Smart Drive Pvt. Ltd",
       role: "Junior Developer",
       period: "2022 - 2024",
-      icon: "<i class='bx  bx-caret-right'></i>",
+      icon: "<i className='bx  bx-caret-right'></i>",
       desc: [
         "Created core UI modules using React & Bootstrap.",
         "Improved website performance & SEO.",
@@ -79,7 +79,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <section className='banner'>
-        <FloatingBackground/>
+        <FloatingBackground />
         <div className='container'>
           <div className='text-center banner-text'>
             <h1 className='animate__zoomInDown animate__animated'>Hello... &#128075; I'm Karthickraj.</h1>
@@ -109,8 +109,8 @@ const Home = () => {
             </li>
           </ul>
           <div className='d-flex justify-content-center gap-4 align-items-center flex-wrap'>
-            <button className='contact-me-btn slider-btn animate__backInLeft animate__animated'>Contact Me</button>
-            <button className='download-cv-btn slider-btn  animate__backInRight animate__animated'>Download CV</button>
+            <a href='tel:8428471708' className='contact-me-btn slider-btn animate__backInLeft animate__animated text-center'>Contact Me</a>
+            <a href={process.env.PUBLIC_URL + "/karthickraj_resume.pdf"} download="karthickraj_resume.pdf" className="download-cv-btn slider-btn  animate__backInRight animate__animated text-center"> Download CV</a>
           </div>
         </div>
       </section>
@@ -137,7 +137,7 @@ const Home = () => {
           <div className='row align-items-center justify-content-center'>
             <div className='d-flex justify-content-between align-items-center  mb-4'>
               <h3 className='section-title'>Projects</h3>
-              <button className='view-all-btn'>View All Projects</button>
+              <Link to={'/projects'} className='view-all-btn'>View All Projects</Link>
             </div>
             <div className='col-xs-12 col-md-6 col-lg-4 mb-3 mb-lg-0'>
               <div className='project-card' data-aos="fade-right">
@@ -146,7 +146,7 @@ const Home = () => {
                 </div>
                 <div className='p-3'>
                   <h6 className='site-name mb-3'>Msdcars</h6>
-                  <button className='hire-me-btn' onClick={() => navigate('https://madrasselfdrivecars.com')}>Visit Site</button>
+                  <a className='hire-me-btn d-inline-flex' target='_blank' href='https://madrasselfdrivecars.com'>Visit Site</a>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ const Home = () => {
                 </div>
                 <div className='p-3'>
                   <h6 className='site-name mb-3'>LittleRoses</h6>
-                  <button className='hire-me-btn' onClick={() => navigate('https://littleroseselc.com.au/')}>Visit Site</button>
+                  <a className='hire-me-btn d-inline-flex' target='_blank' href='https://littleroseselc.com.au'>Visit Site</a>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ const Home = () => {
                 </div>
                 <div className='p-3'>
                   <h6 className='site-name mb-3'>Q Ads Franchise</h6>
-                  <button className='hire-me-btn' onClick={() => navigate('https://qadsfranchise.com')}>Visit Site</button>
+                  <a className='hire-me-btn d-inline-flex' target='_blank' href='https://qadsfranchise.com'>Visit Site</a>
                 </div>
               </div>
             </div>

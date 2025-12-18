@@ -7,7 +7,7 @@ const FloatingItem = ({ text, x, y, delay }) => {
       animate={{ opacity: 0.3, y: -10 }}
       transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", delay }}
       style={{ position: "absolute", left: x, top: y, fontSize: "50px", color: "#000", userSelect: "none", zIndex: 1, }}>
-      <img src={text} alt={text} />
+      <img src={`${process.env.PUBLIC_URL}/${text}`} alt={text} />
     </motion.div>
   );
 };

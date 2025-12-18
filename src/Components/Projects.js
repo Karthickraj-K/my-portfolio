@@ -36,7 +36,7 @@ const Project = () => {
                 <div className='col-xs-12 col-md-6 col-lg-4 mb-3' key={index}>
                   <div className='project-card' data-aos="fade-up">
                     <div className='site-img'>
-                      <img src={item.image} alt={item?.image} />
+                      <img src={`${process.env.PUBLIC_URL}/${item.image}`} alt={item?.image} />
                     </div>
                     <div className='p-3'>
                       <h6 className='site-name mb-3'>{item.name} </h6>

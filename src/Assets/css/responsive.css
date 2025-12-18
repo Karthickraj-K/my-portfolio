@@ -3,7 +3,7 @@
 }
 @media (min-width: 320px) and (max-width : 576px) {
     .logo{font-size: 25px;}
-    .tech-logos img{width: 80px; height: 80px;}
+    .tech-logos img{width: 70px; height: 70px;}
     .tech-logos .css {  margin-left: -25px}
     .tech-logos .bootstrap { margin-left: -25px }
     .tech-logos .js {  margin-left: -25px }
@@ -14,6 +14,8 @@
     .banner-text h2{font-size: 30px;}
     .banner-text{margin-bottom: 35px;}
     footer .copyrights{justify-content: center !important;}
+    .circle-img {--circle-distance: 100px !important;}
+    .circle-img{width: 70px !important; height: 70px !important;}
 }
 @media (min-width: 320px) and (max-width: 767px) {
     .main-menus{display: none;}

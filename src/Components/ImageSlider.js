@@ -6,6 +6,7 @@ const ImageSlider = () => {
 
     const angle = 360 / techLogos.length;
     const [rotateIndex, setRotateIndex] = useState(0);
+    const [distance , setDistance] = useState(200)
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -15,6 +16,14 @@ const ImageSlider = () => {
         return () => clearInterval(interval);
     }, [techLogos.length]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            setDistance(window.innerWidth <= 576 ? 130 : 200);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className='container'>
             <div className='row justify-content-center'>
@@ -23,8 +32,8 @@ const ImageSlider = () => {
                     {techLogos.map((img, i) => {
                         return (
                             <>
-                                <img key={i} src={img} alt={img} className={`${img.split('.')[0]} circle-img`} style={{
-                                    transform: ` rotate(${i * angle + rotateIndex * angle}deg) translate(200px) rotate(-${i * angle + rotateIndex * angle}deg)`,
+                                <img key={i} src={`${process.env.PUBLIC_URL}/${img}`} alt={img} className={`${img.replace("/", "").split('.')[0]} circle-img`} style={{
+                                    transform: ` rotate(${i * angle + rotateIndex * angle}deg) translate(${distance}px)  rotate(-${i * angle + rotateIndex * angle}deg)`,
                                 }} />
                             </>
                         );
