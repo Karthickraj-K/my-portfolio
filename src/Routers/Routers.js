@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout";
 import Home from '../Components/Home'
-import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import About from "../Components/About";
 import Project from "../Components/Projects";
 import Experience from "../Components/Experience";
